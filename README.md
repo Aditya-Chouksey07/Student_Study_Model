@@ -1,10 +1,10 @@
 # Student_Study_Model
 
-# Smart Study Recommender
+# Smart Study 
 
 ## Project Description
 
-The **Smart Study Recommender** is a simple machine learning application developed for the **Fundamentals of AI and ML course**. The purpose of this project is to assist students in identifying which subject they should concentrate on based on their academic performance.
+The **Smart Study model** is a simple machine learning application developed for the **Fundamentals of AI and ML course**. The purpose of this project is to assist students in identifying which subject they should concentrate on based on their academic performance.
 
 Students often struggle to decide which subject requires more attention during exam preparation. This system analyzes scores in **Physics, Chemistry, and Mathematics** and recommends the subject where improvement is most needed.
 
@@ -38,13 +38,13 @@ The project was implemented using the following tools:
 ## Project Structure
 
 ```id="r1kdrs"
-smart-study-recommender
+smart-study-model
 │
 ├── data
 │   └── student_scores.csv
 │
 ├── src
-│   └── recommender.py
+│   └── model.py
 │
 ├── notebooks
 │   └── analysis.py
@@ -64,13 +64,13 @@ smart-study-recommender
 Clone the repository:
 
 ```id="4o2ilv"
-git clone https://github.com/yourusername/smart-study-recommender.git
+git clone https://github.com/yourusername/smart-study-model.git
 ```
 
 Move into the project folder:
 
 ```id="vt19zh"
-cd smart-study-recommender
+cd smart-study-model
 ```
 
 Install the required libraries:
@@ -87,7 +87,7 @@ Before running the application, the machine learning model needs to be trained.
 
 ```id="b3vhq7"
 cd src
-python recommender.py
+python model.py
 ```
 
 This script will:
