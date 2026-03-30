@@ -1,4 +1,5 @@
 # Student_Study_Model
+
 Project Description
 The Smart Study Recommender is a simple machine learning application developed for the Fundamentals of AI and ML course. The purpose of this project is to assist students in identifying which subject they should concentrate on based on their academic performance.
 
