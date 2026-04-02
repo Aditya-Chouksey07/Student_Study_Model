@@ -21,6 +21,12 @@ The project demonstrates how basic machine learning techniques can be applied to
 
 ---
 
+AI/ML Concepts Used
+Intelligent Agent – Agent perceives, acts, and learns
+Search Strategy – Constraint-based filtering of materials
+Heuristic Ranking – Score-based ranking formula
+Adaptive Learning – Score updates based on user ratings
+
 ## Technologies Used
 
 The project was implemented using the following tools:
