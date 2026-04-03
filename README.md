@@ -1,165 +1,83 @@
-# Student_Study_Model
+# 🎓 AI Adaptive Study Material Recommender System
 
-# Smart Study 
+## 📌 Project Description
+An intelligent study material recommender system built with Python.
+It recommends videos, notes, and practice problems based on the
+student's subject, difficulty preference, and material type.
+The system LEARNS from user ratings to improve future recommendations.
 
-## Project Description
+## 🧠 AI/ML Concepts Used
+- **Intelligent Agent** – Agent perceives, acts, and learns
+- **Search Strategy** – Constraint-based filtering of materials
+- **Heuristic Ranking** – Score-based ranking formula
+- **Adaptive Learning** – Score updates based on user ratings
 
-The **Smart Study model** is a simple machine learning application developed for the **Fundamentals of AI and ML course**. The purpose of this project is to assist students in identifying which subject they should concentrate on based on their academic performance.
+## 🛠️ Technologies Used
+- Python 3.x
+- Pandas
+- CSV (for data storage)
 
-Students often struggle to decide which subject requires more attention during exam preparation. This system analyzes scores in **Physics, Chemistry, and Mathematics** and recommends the subject where improvement is most needed.
-
-The project demonstrates how basic machine learning techniques can be applied to solve a practical educational problem.
-
----
-
-## How the System Works
-
-1. A dataset containing student scores is used for training the model.
-2. The system determines the **weakest subject** for each student based on their marks.
-3. A **Decision Tree classification model** is trained using this dataset.
-4. When a user enters their scores, the model predicts the subject that should receive more focus.
-
----
-
-AI/ML Concepts Used
-Intelligent Agent – Agent perceives, acts, and learns
-Search Strategy – Constraint-based filtering of materials
-Heuristic Ranking – Score-based ranking formula
-Adaptive Learning – Score updates based on user ratings
-
-## Technologies Used
-
-The project was implemented using the following tools:
-
-* **Python**
-* **Pandas** for data processing
-* **Scikit-learn** for building the machine learning model
-* **Matplotlib** for basic data visualization
-* **Joblib** for saving the trained model
-* **Streamlit** for creating a simple web interface
-* **GitHub** for version control
-
----
-
-## Project Structure
-
-```id="r1kdrs"
-smart-study-model
-│
-├── data
-│   └── student_scores.csv
-│
-├── src
-│   └── model.py
-│
-├── notebooks
-│   └── analysis.py
-│
-├── model
-│   └── study_model.pkl
-│
-├── app.py
-├── requirements.txt
-└── README.md
+## 📁 Folder Structure
+```
+study_recommender/
+├── data/
+│   ├── materials.csv       ← Study material dataset (30 entries)
+│   └── feedback.csv        ← Auto-filled by program when you rate
+├── agent.py                ← Intelligent Agent logic
+├── recommender.py          ← Search + Heuristic Ranking
+├── feedback.py             ← Adaptive Learning from ratings
+├── main.py                 ← Main program (run this!)
+├── utils.py                ← Helper functions
+└── README.md               ← This file
 ```
 
----
+## 🚀 How to Run
 
-## Installation
-
-Clone the repository:
-
-```id="4o2ilv"
-git clone https://github.com/yourusername/smart-study-model.git
+### Step 1 — Install requirement
+```bash
+pip install pandas
 ```
 
-Move into the project folder:
-
-```id="vt19zh"
-cd smart-study-model
+### Step 2 — Run the program
+```bash
+python main.py
 ```
 
-Install the required libraries:
+## 📊 Ranking Formula
+```
+Final Score  = adaptive_score × difficulty_weight × type_weight
+adaptive_score = (base_score + Σ ratings) / (1 + N)
 
-```id="o3q4cw"
-pip install -r requirements.txt
+difficulty_weight: Easy=1.0, Medium=1.1, Hard=1.2
+type_weight:       Video=1.0, Notes=1.05, Practice=1.1
 ```
 
----
+## 📚 Available Subjects
+- Python
+- Math
+- DSA
+- AI
 
-## Training the Model
+## 🎯 Difficulty Levels
+- Easy
+- Medium
+- Hard
 
-Before running the application, the machine learning model needs to be trained.
+## 📂 Material Types
+- Video
+- Notes
+- Practice
 
-```id="b3vhq7"
-cd src
-python model.py
-```
+## 💡 How Adaptive Learning Works
+1. All materials start with base_score = 3.5
+2. When you rate a material, the score is recalculated
+3. High ratings → score goes UP → ranked higher next time
+4. Low ratings  → score goes DOWN → ranked lower next time
 
-This script will:
+## 👨‍💻 Author
+ADITYA CHOUKSEY 25BAI11531
+B.Tech CSE(AIML), 1st Year
+VIT Bhopal University
 
-* load the dataset
-* train the decision tree model
-* evaluate the model accuracy
-* store the trained model inside the `model` folder
-
----
-
-## Running the Application
-
-Once the model is trained, start the web interface using Streamlit.
-
-```id="fkl3wy"
-streamlit run app.py
-```
-
-The application will open in your browser where you can input your subject scores.
-
----
-
-## Example Prediction
-
-Example input:
-
-```id="a5xqhh"
-Physics: 40
-Chemistry: 75
-Maths: 50
-```
-
-Example output:
-
-```id="wq7xaq"
-Recommended subject to focus on: Physics
-```
-
----
-
-## Possible Improvements
-
-Some future enhancements for this project include:
-
-* using a larger and more realistic dataset
-* recommending specific **topics** rather than only subjects
-* improving prediction accuracy with more advanced models
-* deploying the application online
-
----
-
-## Learning Outcomes
-
-While developing this project, the following concepts were explored:
-
-* data preprocessing using Python
-* supervised learning techniques
-* decision tree classification
-* model training and evaluation
-* building a simple AI-based application
-
----
-
-## Author
-
-**Aditya Chouksey**
-CSE (AI & ML) – First Year
-Course: Fundamentals of AI and ML
+## 📅 Submitted For
+AI/ML Course Project — @nd SEMESTER 2026
